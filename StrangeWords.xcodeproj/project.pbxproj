@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97BDDDC2F8B417935D0693DD /* Pods_StrangeWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730B5B155037D092EE47A1EE /* Pods_StrangeWords.framework */; };
+		DB55A8012913A7010006EE92 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55A8002913A7010006EE92 /* ArticleView.swift */; };
+		DB5600392913C0A7000D481A /* SingleSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5600382913C0A7000D481A /* SingleSampleView.swift */; };
+		DB56003B2913CE72000D481A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56003A2913CE72000D481A /* CollectionView.swift */; };
 		DBAA37C8290FBDB3008FF302 /* StrangeWordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA37C7290FBDB3008FF302 /* StrangeWordsApp.swift */; };
 		DBAA37CA290FBDB3008FF302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA37C9290FBDB3008FF302 /* ContentView.swift */; };
 		DBAA37CC290FBDB6008FF302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA37CB290FBDB6008FF302 /* Assets.xcassets */; };
@@ -14,11 +18,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6998B2A156AB2E64CF92353D /* Pods-StrangeWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrangeWords.release.xcconfig"; path = "Target Support Files/Pods-StrangeWords/Pods-StrangeWords.release.xcconfig"; sourceTree = "<group>"; };
+		730B5B155037D092EE47A1EE /* Pods_StrangeWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrangeWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB55A8002913A7010006EE92 /* ArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		DB5600382913C0A7000D481A /* SingleSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSampleView.swift; sourceTree = "<group>"; };
+		DB56003A2913CE72000D481A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		DBAA37C4290FBDB3008FF302 /* StrangeWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrangeWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA37C7290FBDB3008FF302 /* StrangeWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrangeWordsApp.swift; sourceTree = "<group>"; };
 		DBAA37C9290FBDB3008FF302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBAA37CB290FBDB6008FF302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBAA37CE290FBDB6008FF302 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7CDF19655AFB65AC1C23714 /* Pods-StrangeWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrangeWords.debug.xcconfig"; path = "Target Support Files/Pods-StrangeWords/Pods-StrangeWords.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BDDDC2F8B417935D0693DD /* Pods_StrangeWords.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1171DB2DBBDDC350F3C205 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				730B5B155037D092EE47A1EE /* Pods_StrangeWords.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4F1C6A95341C7077180F815 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7CDF19655AFB65AC1C23714 /* Pods-StrangeWords.debug.xcconfig */,
+				6998B2A156AB2E64CF92353D /* Pods-StrangeWords.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DBAA37BB290FBDB3008FF302 = {
 			isa = PBXGroup;
 			children = (
 				DBAA37C6290FBDB3008FF302 /* StrangeWords */,
 				DBAA37C5290FBDB3008FF302 /* Products */,
+				C4F1C6A95341C7077180F815 /* Pods */,
+				4A1171DB2DBBDDC350F3C205 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +83,9 @@
 			children = (
 				DBAA37C7290FBDB3008FF302 /* StrangeWordsApp.swift */,
 				DBAA37C9290FBDB3008FF302 /* ContentView.swift */,
+				DB55A8002913A7010006EE92 /* ArticleView.swift */,
+				DB5600382913C0A7000D481A /* SingleSampleView.swift */,
+				DB56003A2913CE72000D481A /* CollectionView.swift */,
 				DBAA37CB290FBDB6008FF302 /* Assets.xcassets */,
 				DBAA37CD290FBDB6008FF302 /* Preview Content */,
 			);
@@ -74,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBAA37D2290FBDB6008FF302 /* Build configuration list for PBXNativeTarget "StrangeWords" */;
 			buildPhases = (
+				DEC6850CBB1EEBE741BD555D /* [CP] Check Pods Manifest.lock */,
 				DBAA37C0290FBDB3008FF302 /* Sources */,
 				DBAA37C1290FBDB3008FF302 /* Frameworks */,
 				DBAA37C2290FBDB3008FF302 /* Resources */,
@@ -103,7 +137,7 @@
 				};
 			};
 			buildConfigurationList = DBAA37BF290FBDB3008FF302 /* Build configuration list for PBXProject "StrangeWords" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,12 +166,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DEC6850CBB1EEBE741BD555D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StrangeWords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBAA37C0290FBDB3008FF302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5600392913C0A7000D481A /* SingleSampleView.swift in Sources */,
+				DB56003B2913CE72000D481A /* CollectionView.swift in Sources */,
 				DBAA37CA290FBDB3008FF302 /* ContentView.swift in Sources */,
+				DB55A8012913A7010006EE92 /* ArticleView.swift in Sources */,
 				DBAA37C8290FBDB3008FF302 /* StrangeWordsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +323,7 @@
 		};
 		DBAA37D3290FBDB6008FF302 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7CDF19655AFB65AC1C23714 /* Pods-StrangeWords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +352,7 @@
 		};
 		DBAA37D4290FBDB6008FF302 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6998B2A156AB2E64CF92353D /* Pods-StrangeWords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

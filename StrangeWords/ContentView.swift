@@ -11,13 +11,19 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-           HStack
+           VStack
            {
                NavigationLink(destination: ArticleView(message: "Detail Page #2") )
                {
                    Text("Go detail Page #2 >")
                }
                .navigationBarTitle("Index Page #1")
+               
+               NavigationLink(destination: CollectionComponent() )
+               {
+                   Text("Go detail Page #3 >")
+               }
+               .navigationBarTitle("Index Page #3")
            }
        }
         .padding(.all, 1.0)
