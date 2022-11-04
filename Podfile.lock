@@ -7,19 +7,23 @@ PODS:
   - DifferenceKit/Core (1.3.0)
   - DifferenceKit/UIKitExtension (1.3.0):
     - DifferenceKit/Core
+  - SwiftUIX (0.0.3)
 
 DEPENDENCIES:
   - ASCollectionView-SwiftUI (~> 2.1.1)
+  - SwiftUIX (~> 0.0.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ASCollectionView-SwiftUI
     - DifferenceKit
+    - SwiftUIX
 
 SPEC CHECKSUMS:
   ASCollectionView-SwiftUI: 4d944307996a5c947254a3ecd3999cd6183d280a
   DifferenceKit: ab185c4d7f9cef8af3fcf593e5b387fb81e999ca
+  SwiftUIX: 3348c2b1eec70c3edfe039fdf1388af2b0155b2b
 
-PODFILE CHECKSUM: d9fc916e23c53d5bf5429ef95687f959382189c7
+PODFILE CHECKSUM: 7f0395ca78cdfa6f274b95dceee4341aef1a74b1
 
 COCOAPODS: 1.11.3

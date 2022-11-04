@@ -28,9 +28,7 @@ struct CollectionComponent : UIViewRepresentable {
       
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GenericCell
-            cell.customView.rootView = AnyView(
-                Text(data[indexPath.item]).font(Font.title).border(Color.red)
-            )
+            cell.label.text = data[indexPath.item]
             return cell
         }
     }
@@ -40,14 +38,16 @@ struct CollectionComponent : UIViewRepresentable {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 5
+        
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.dataSource = context.coordinator
         cv.delegate = context.coordinator
         cv.register(GenericCell.self, forCellWithReuseIdentifier: "cell")
       
         cv.backgroundColor = .white
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+    
         return cv
     }
     
@@ -58,26 +58,25 @@ struct CollectionComponent : UIViewRepresentable {
       
       
 open class GenericCell: UICollectionViewCell {
-        public var customView = UIHostingController(rootView: AnyView(Text("")))
-        public override init(frame: CGRect) {
-        super.init(frame: frame)
-            configure()
-        }
-        public required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-            configure()
-        }
-        private func configure() {
-            contentView.addSubview(customView.view)
-            customView.view.preservesSuperviewLayoutMargins = false
-            customView.view.translatesAutoresizingMaskIntoConstraints = false
-      
+    public let label = UILabel()
+    public override init(frame: CGRect) {
+    super.init(frame: frame)
+        configure()
+    }
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+    private func configure() {
+        contentView.addSubview(self.label)
+        self.label.preservesSuperviewLayoutMargins = false
+        self.label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            customView.view.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
-            customView.view.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
-            customView.view.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            customView.view.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
-            customView.view.heightAnchor.constraint(equalToConstant: 30)
+            self.label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            self.label.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            self.label.topAnchor.constraint(equalTo: contentView.topAnchor),
+            self.label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+//            customView.view.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

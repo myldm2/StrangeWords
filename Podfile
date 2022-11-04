@@ -10,4 +10,5 @@ require 'pathname'
 
 target 'StrangeWords' do
   pod 'ASCollectionView-SwiftUI', '~> 2.1.1'
+  pod 'SwiftUIX', '~> 0.0.3'
 end

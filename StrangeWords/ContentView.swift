@@ -24,6 +24,12 @@ struct ContentView: View {
                    Text("Go detail Page #3 >")
                }
                .navigationBarTitle("Index Page #3")
+               
+               NavigationLink(destination: ArticleEditView() )
+               {
+                   Text("Article Edit >")
+               }
+               .navigationBarTitle("Article Edit")
            }
        }
         .padding(.all, 1.0)
